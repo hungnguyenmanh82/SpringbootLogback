@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Welcome</title>
+
+</head>
+<body>
+	<h1>springboot logging</h1>
+
+	<!--  
+         <a th:href="@{/order/list}">
+         If our app is installed at http://localhost:8080/myapp, this URL will output:
+         <a href="/myapp/order/list">   
+         -->
+
+	<h3>cách 1: (ko dùng) ab</h3>
+	<p>
+	<span style="color: red"> Logback dc add vào Tomcat và Jetty rồi nên Springboot </span>
+	</p>
+	
+	<br><br>
+	<span style="color: red"> Lưu ý lỗi SLF4J API bị duplicate vì có 2 lib ở Maven khai báo Slf4j. Vì các lib của Springboot hay hibernate, devtool... đều có log 
+	=> cần thiết log level ở file application.properties để tăng performance của app</span>
+	<p>dùng Springboot dùng SLF4J API mặc định dùng Logback by default. Da đc ad vao mặc định web ap. Nếu dùng Logback thì phải học thêm Logback config mất thời gian</p>
+	<a href="https://www.baeldung.com/spring-boot-logging">https://www.baeldung.com/spring-boot-logging</a>
+	<br>
+	<br>
+	
+	<h3>cách 2: <span style="color: red">(nên dùng)</span></h3>
+	<p>dùng Log4j2 trực tiếp như java core. Ko liên quan gì tới	Springboot. Log4j2 ưu điểm hơn LogBack</p>
+	<a href="https://howtodoinjava.com/log4j2/log4j-2-xml-configuration-example/">https://howtodoinjava.com/log4j2/log4j-2-xml-configuration-example/</a>
+	<br>
+	<a href="https://github.com/hungnguyenmanh82/JavaCore_testLog4j2">https://github.com/hungnguyenmanh82/JavaCore_testLog4j2</a>
+	<br>
+	<br>
+	
+
+
+
+
+</body>
+
+</html>
