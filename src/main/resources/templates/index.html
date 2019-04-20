@@ -14,28 +14,30 @@
          <a href="/myapp/order/list">   
          -->
 
-	<h3>cách 1: (ko dùng) abde</h3>
+	
+	<h3>cách 1: Logback (ko dùng)</h3>
 	<p>
-	<span style="color: red"> Logback dc add vào Tomcat và Jetty rồi nên Springboot </span>
+	<span style="color: red"> Logback dc add vào Tomcat và Jetty rồi, nên Springboot ko cần add logback nữa </span>
 	</p>
 	
 	<br><br>
 	<span style="color: red"> Lưu ý lỗi SLF4J API bị duplicate vì có 2 lib ở Maven khai báo Slf4j. Vì các lib của Springboot hay hibernate, devtool... đều có log 
-	=> cần thiết log level ở file application.properties để tăng performance của app</span>
+	=> cần thiết log level  với Hibernate, web-starter, devtool ở file application.properties để tăng performance của app</span>
 	<p>dùng Springboot dùng SLF4J API mặc định dùng Logback by default. Da đc ad vao mặc định web ap. Nếu dùng Logback thì phải học thêm Logback config mất thời gian</p>
 	<a href="https://www.baeldung.com/spring-boot-logging">https://www.baeldung.com/spring-boot-logging</a>
+	<a href="https://github.com/hungnguyenmanh82/SpringbootLogback">https://github.com/hungnguyenmanh82/SpringbootLogback</a>
 	<br>
 	<br>
 	
-	<h3>cách 2: <span style="color: red">(nên dùng)</span></h3>
-	<p>dùng Log4j2 trực tiếp như java core. Ko liên quan gì tới	Springboot. Log4j2 ưu điểm hơn LogBack</p>
+	<h3>cách 2: Log4j2 <span style="color: red">(nên dùng)</span></h3>
+	<p>dùng Log4j2 trực tiếp như java core. Ko liên quan gì tới	Springboot. Log4j2 ưu điểm hơn LogBack ve performance</p>
 	<a href="https://howtodoinjava.com/log4j2/log4j-2-xml-configuration-example/">https://howtodoinjava.com/log4j2/log4j-2-xml-configuration-example/</a>
 	<br>
 	<a href="https://github.com/hungnguyenmanh82/JavaCore_testLog4j2">https://github.com/hungnguyenmanh82/JavaCore_testLog4j2</a>
 	<br>
 	<br>
 	
-
+	<h3> Devtool</h3>
 
 
 
